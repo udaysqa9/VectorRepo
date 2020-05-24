@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>UI-AUTOMATION</td>
+              <td>1</td>
+            <td>23 May 2020, 00:21</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">Credits.add_the_value_amount_of_each_credit_code(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="365363">0.000</td>
+              <td class="duration" data-value="365363">0.000</td>
+              <td class="duration" data-value="365363">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Credits.enter_the_code_that_will_be_needed(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="442726">0.000</td>
+              <td class="duration" data-value="442726">0.000</td>
+              <td class="duration" data-value="442726">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Hook.after()</td>
+              <td>2</td>
+              <td class="duration" data-value="545836739">0.545</td>
+              <td class="duration" data-value="545836739">0.625</td>
+              <td class="duration" data-value="1091673478">1.091</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Hook.before(Scenario)</td>
+              <td>2</td>
+              <td class="duration" data-value="20603809">0.020</td>
+              <td class="duration" data-value="20603809">0.039</td>
+              <td class="duration" data-value="41207619">0.041</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">InvestmentStep.add_a_usecase(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="307410">0.000</td>
+              <td class="duration" data-value="307410">0.000</td>
+              <td class="duration" data-value="307410">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">InvestmentStep.add_primarygoal(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="297628">0.000</td>
+              <td class="duration" data-value="297628">0.000</td>
+              <td class="duration" data-value="297628">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">InvestmentStep.click_on_the_next_button()</td>
+              <td>4</td>
+              <td class="duration" data-value="478041">0.000</td>
+              <td class="duration" data-value="478041">0.000</td>
+              <td class="duration" data-value="1912164">0.001</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">InvestmentStep.enter_competitor(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="353497">0.000</td>
+              <td class="duration" data-value="353497">0.000</td>
+              <td class="duration" data-value="353497">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">InvestmentStep.enter_the_business_activity(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="301235">0.000</td>
+              <td class="duration" data-value="301235">0.000</td>
+              <td class="duration" data-value="301235">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">InvestmentStep.enter_the_incremental_monthly_recurring_revenue(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="305790">0.000</td>
+              <td class="duration" data-value="305790">0.000</td>
+              <td class="duration" data-value="305790">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">InvestmentStep.enter_the_months_to_achieve_the_goal(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="352366">0.000</td>
+              <td class="duration" data-value="352366">0.000</td>
+              <td class="duration" data-value="352366">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">InvestmentStep.write_down_the_business_justification(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="323589">0.000</td>
+              <td class="duration" data-value="323589">0.000</td>
+              <td class="duration" data-value="323589">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Login.assign_a_name_to_the_promotion(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="502138">0.000</td>
+              <td class="duration" data-value="502138">0.000</td>
+              <td class="duration" data-value="502138">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Login.check_the_account_name()</td>
+              <td>1</td>
+              <td class="duration" data-value="715086">0.000</td>
+              <td class="duration" data-value="715086">0.000</td>
+              <td class="duration" data-value="715086">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Login.enter_customer_aws_accountid(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="381572">0.000</td>
+              <td class="duration" data-value="381572">0.000</td>
+              <td class="duration" data-value="381572">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Login.enter_customer_name(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="320104">0.000</td>
+              <td class="duration" data-value="320104">0.000</td>
+              <td class="duration" data-value="320104">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Login.select_customer(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="304074">0.000</td>
+              <td class="duration" data-value="304074">0.000</td>
+              <td class="duration" data-value="304074">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Login.select_customer_geo_location(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="319642">0.000</td>
+              <td class="duration" data-value="319642">0.000</td>
+              <td class="duration" data-value="319642">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Login.user_is_already_on_Request_Page()</td>
+              <td>2</td>
+              <td class="duration" data-value="4041605941">4.041</td>
+              <td class="duration" data-value="4041605941">6.644</td>
+              <td class="duration" data-value="8083211882">8.083</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ProductServices.check_on_compute()</td>
+              <td>1</td>
+              <td class="duration" data-value="475590">0.000</td>
+              <td class="duration" data-value="475590">0.000</td>
+              <td class="duration" data-value="475590">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Review.verify_the_AWS_accountid(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="327984">0.000</td>
+              <td class="duration" data-value="327984">0.000</td>
+              <td class="duration" data-value="327984">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>21</td>
+            <td>27</td>
+            <td class="duration">0.341</td>
+            <td class="duration">8.083</td>
+            <td class="duration">9.224</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

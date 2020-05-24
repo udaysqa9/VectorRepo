@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="2" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="6.449351">
+<testcase classname="AWS Investments" name="Verify The Request Credit" time="5.490541">
+<failure message="org.junit.ComparisonFailure: expected:&lt;[Investments]&gt; but was:&lt;[Google]&gt;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:115)&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:144)&#10;&#9;at pageObject.Login_Page.VerifyRequestPage(Login_Page.java:74)&#10;&#9;at step_definition.Login.user_is_already_on_Request_Page(Login.java:23)&#10;&#9;at ✽.User is already on Request Page(file:src/test/resources/login.feature:7)&#10;"><![CDATA[Given User is already on Request Page.......................................failed
+Then Assign a name to the "InvestTest"......................................skipped
+Then Enter customer AWS "971770194144"......................................skipped
+Then Enter customer "Joshee"................................................skipped
+Then Select customer "Defense"..............................................skipped
+Then Select customer geo "Canada"...........................................skipped
+Then Click on the next button...............................................skipped
+Then Add a "Archiving"......................................................skipped
+Then Click on the next button...............................................skipped
+Then Add "Goodwill".........................................................skipped
+And Enter the "Marketing"...................................................skipped
+And Enter "Adobe"...........................................................skipped
+And Write down the "Testing Purpose"........................................skipped
+And Enter the incremental monthly "10000"...................................skipped
+And Enter the "20" to achieve the goal......................................skipped
+Then Click on the next button...............................................skipped
+And Check on compute........................................................skipped
+Then Add the value "1000" of each credit code...............................skipped
+And Enter the "100" that will be needed.....................................skipped
+Then Click on the next button...............................................skipped
+Then Verify the AWS "971770194144"..........................................skipped
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<[Investments]> but was:<[Google]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at pageObject.Login_Page.VerifyRequestPage(Login_Page.java:74)
+	at step_definition.Login.user_is_already_on_Request_Page(Login.java:23)
+	at ✽.User is already on Request Page(file:src/test/resources/login.feature:7)
+]]></failure>
+</testcase>
+<testcase classname="AWS Investments" name="Verify Element" time="0.95881">
+<failure message="org.junit.ComparisonFailure: expected:&lt;[Investments]&gt; but was:&lt;[Google]&gt;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:115)&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:144)&#10;&#9;at pageObject.Login_Page.VerifyRequestPage(Login_Page.java:74)&#10;&#9;at step_definition.Login.user_is_already_on_Request_Page(Login.java:23)&#10;&#9;at ✽.User is already on Request Page(file:src/test/resources/login.feature:44)&#10;"><![CDATA[Given User is already on Request Page.......................................failed
+Then Check the account name.................................................skipped
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<[Investments]> but was:<[Google]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at pageObject.Login_Page.VerifyRequestPage(Login_Page.java:74)
+	at step_definition.Login.user_is_already_on_Request_Page(Login.java:23)
+	at ✽.User is already on Request Page(file:src/test/resources/login.feature:44)
+]]></failure>
+</testcase>
+</testsuite>

@@ -1,0 +1,71 @@
+@Smokes
+Feature: AWS Investments
+
+  @Smoke_001
+  Scenario Outline: Verify The Request Credit [90m# src/test/resources/login.feature:6[0m
+    [36mGiven User is already on Request Page[0m
+    [36mThen Assign a name to the "<promotionName>"[0m
+    [36mThen Enter customer AWS "<accountID>"[0m
+    [36mThen Enter customer "<name>"[0m
+    [36mThen Select customer "<industry>"[0m
+    [36mThen Select customer geo "<location>"[0m
+    [36mThen Click on the next button[0m
+    [36mThen Add a "<usecase>"[0m
+    [36mThen Click on the next button[0m
+    [36mThen Add "<primarygoal>"[0m
+    [36mAnd Enter the "<businessActivity>"[0m
+    [36mAnd Enter "<competitor>"[0m
+    [36mAnd Write down the "<businessJustification>"[0m
+    [36mAnd Enter the incremental monthly "<recurringRevenue>"[0m
+    [36mAnd Enter the "<months>" to achieve the goal[0m
+    [36mThen Click on the next button[0m
+    [36mAnd Check on compute[0m
+    [36mThen Add the value "<amount>" of each credit code[0m
+    [36mAnd Enter the "<code>" that will be needed[0m
+    [36mThen Click on the next button[0m
+    [36mThen Verify the AWS "<accountID>"[0m
+
+    Examples: 
+
+  @Smokes @Smoke_001
+  Scenario Outline: Verify The Request Credit     [90m# src/test/resources/login.feature:36[0m
+    [31mGiven [0m[31mUser is already on Request Page[0m         [90m# Login.user_is_already_on_Request_Page()[0m
+      [31morg.junit.ComparisonFailure: expected:<[Investments]> but was:<[Google]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at pageObject.Login_Page.VerifyRequestPage(Login_Page.java:74)
+	at step_definition.Login.user_is_already_on_Request_Page(Login.java:23)
+	at ✽.User is already on Request Page(file:src/test/resources/login.feature:7)
+[0m
+    [36mThen [0m[36mAssign a name to the "[0m[36m[1mInvestTest[0m[36m"[0m        [90m# Login.assign_a_name_to_the_promotion(String)[0m
+    [36mThen [0m[36mEnter customer AWS "[0m[36m[1m971770194144[0m[36m"[0m        [90m# Login.enter_customer_aws_accountid(String)[0m
+    [36mThen [0m[36mEnter customer "[0m[36m[1mJoshee[0m[36m"[0m                  [90m# Login.enter_customer_name(String)[0m
+    [36mThen [0m[36mSelect customer "[0m[36m[1mDefense[0m[36m"[0m                [90m# Login.select_customer(String)[0m
+    [36mThen [0m[36mSelect customer geo "[0m[36m[1mCanada[0m[36m"[0m             [90m# Login.select_customer_geo_location(String)[0m
+    [36mThen [0m[36mClick on the next button[0m                 [90m# InvestmentStep.click_on_the_next_button()[0m
+    [36mThen [0m[36mAdd a "[0m[36m[1mArchiving[0m[36m"[0m                        [90m# InvestmentStep.add_a_usecase(String)[0m
+    [36mThen [0m[36mClick on the next button[0m                 [90m# InvestmentStep.click_on_the_next_button()[0m
+    [36mThen [0m[36mAdd "[0m[36m[1mGoodwill[0m[36m"[0m                           [90m# InvestmentStep.add_primarygoal(String)[0m
+    [36mAnd [0m[36mEnter the "[0m[36m[1mMarketing[0m[36m"[0m                     [90m# InvestmentStep.enter_the_business_activity(String)[0m
+    [36mAnd [0m[36mEnter "[0m[36m[1mAdobe[0m[36m"[0m                             [90m# InvestmentStep.enter_competitor(String)[0m
+    [36mAnd [0m[36mWrite down the "[0m[36m[1mTesting Purpose[0m[36m"[0m          [90m# InvestmentStep.write_down_the_business_justification(String)[0m
+    [36mAnd [0m[36mEnter the incremental monthly "[0m[36m[1m10000[0m[36m"[0m     [90m# InvestmentStep.enter_the_incremental_monthly_recurring_revenue(String)[0m
+    [36mAnd [0m[36mEnter the "[0m[36m[1m20[0m[36m" to achieve the goal[0m        [90m# InvestmentStep.enter_the_months_to_achieve_the_goal(String)[0m
+    [36mThen [0m[36mClick on the next button[0m                 [90m# InvestmentStep.click_on_the_next_button()[0m
+    [36mAnd [0m[36mCheck on compute[0m                          [90m# ProductServices.check_on_compute()[0m
+    [36mThen [0m[36mAdd the value "[0m[36m[1m1000[0m[36m" of each credit code[0m [90m# Credits.add_the_value_amount_of_each_credit_code(String)[0m
+    [36mAnd [0m[36mEnter the "[0m[36m[1m100[0m[36m" that will be needed[0m       [90m# Credits.enter_the_code_that_will_be_needed(String)[0m
+    [36mThen [0m[36mClick on the next button[0m                 [90m# InvestmentStep.click_on_the_next_button()[0m
+    [36mThen [0m[36mVerify the AWS "[0m[36m[1m971770194144[0m[36m"[0m            [90m# Review.verify_the_AWS_accountid(String)[0m
+
+  @Smokes @Smoke_002
+  Scenario: Verify Element                [90m# src/test/resources/login.feature:42[0m
+    [31mGiven [0m[31mUser is already on Request Page[0m [90m# Login.user_is_already_on_Request_Page()[0m
+      [31morg.junit.ComparisonFailure: expected:<[Investments]> but was:<[Google]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at pageObject.Login_Page.VerifyRequestPage(Login_Page.java:74)
+	at step_definition.Login.user_is_already_on_Request_Page(Login.java:23)
+	at ✽.User is already on Request Page(file:src/test/resources/login.feature:44)
+[0m
+    [36mThen [0m[36mCheck the account name[0m           [90m# Login.check_the_account_name()[0m
